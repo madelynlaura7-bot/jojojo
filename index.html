@@ -1,0 +1,886 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Mi página web personal desarrollada con HTML, CSS, Bootstrap y JavaScript.">
+
+    <title>Madelyn | Mi espacio personal</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript propio -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =========================
+         1. NAVEGACION
+    ========================== -->
+
+    <header id="inicio">
+
+        <nav class="navbar navbar-expand-lg fixed-top navbar-personal">
+            <div class="container">
+
+                <a class="navbar-brand" href="#inicio">
+                    <span class="brand-icon">M</span>
+                    MADelyn<span class="brand-dot">.</span>
+                </a>
+
+                <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal"
+                        aria-controls="menuPrincipal"
+                        aria-expanded="false"
+                        aria-label="Abrir menú">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#inicio">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pasatiempos">Pasatiempos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#intereses">Intereses</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#horario">Horario</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#musica">Música</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#juegos">Juegos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+
+                    </ul>
+
+                    <button id="themeBtn" class="theme-btn ms-lg-3"
+                            type="button" aria-label="Activar modo oscuro">
+                        <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                        <span id="themeText">Modo oscuro</span>
+                    </button>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         2. CARRUSEL DE 3 FOTOS
+    ========================== -->
+
+    <main>
+
+        <section class="hero-section">
+
+            <div id="miCarrusel" class="carousel slide"
+                 data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+
+                    <button type="button" data-bs-target="#miCarrusel"
+                            data-bs-slide-to="0" class="active"
+                            aria-label="Fotografía 1"></button>
+
+                    <button type="button" data-bs-target="#miCarrusel"
+                            data-bs-slide-to="1"
+                            aria-label="Fotografía 2"></button>
+
+                    <button type="button" data-bs-target="#miCarrusel"
+                            data-bs-slide-to="2"
+                            aria-label="Fotografía 3"></button>
+
+                </div>
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1600"
+                             class="d-block w-100"
+                             alt="Paisaje natural al amanecer">
+
+                        <div class="carousel-caption">
+                            <span class="hero-label">MI ESPACIO PERSONAL</span>
+                            <h1>Bienvenidos a mi mundo</h1>
+                            <p>Conoce mis gustos, sueños y experiencias.</p>
+                            <a href="#pasatiempos" class="hero-link">
+                                Conocer más <i class="bi bi-arrow-down"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600"
+                             class="d-block w-100"
+                             alt="Computadora y programación">
+
+                        <div class="carousel-caption">
+                            <span class="hero-label">MIS INTERESES</span>
+                            <h1>Creatividad y tecnología</h1>
+                            <p>Aprendiendo y construyendo nuevas ideas.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600"
+                             class="d-block w-100"
+                             alt="Naturaleza y aventura">
+
+                        <div class="carousel-caption">
+                            <span class="hero-label">MIS EXPERIENCIAS</span>
+                            <h1>Cada día es una oportunidad</h1>
+                            <p>Disfrutando cada momento de la vida.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev"
+                        type="button" data-bs-target="#miCarrusel"
+                        data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next"
+                        type="button" data-bs-target="#miCarrusel"
+                        data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             3. PRESENTACION
+        ========================== -->
+
+        <section class="container presentation-section">
+
+            <div class="presentation-content">
+
+                <span class="section-label">UN POCO SOBRE MÍ</span>
+
+                <h2>¡Hola! Soy <span>Madelyn</span></h2>
+
+                <p>
+                    Esta es mi página personal, un espacio donde
+                    comparto mis actividades favoritas, mis intereses,
+                    mis objetivos y las cosas que forman parte de mi vida.
+                </p>
+
+                <a href="#intereses" class="primary-link">
+                    Explorar mi página
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+
+            </div>
+
+            <div class="presentation-decoration">
+                <i class="bi bi-stars"></i>
+                <span>Aprender, crear y crecer.</span>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             4. PASATIEMPOS
+        ========================== -->
+
+        <section id="pasatiempos" class="content-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">LO QUE DISFRUTO</span>
+                    <h2>Mis pasatiempos</h2>
+                    <p>Actividades que hacen especial mi tiempo libre.</p>
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-md-4">
+                        <article class="info-card">
+                            <div class="card-icon purple">
+                                <i class="bi bi-book-half"></i>
+                            </div>
+                            <h3>Leer</h3>
+                            <p>
+                                Disfruto descubrir nuevas ideas,
+                                historias y conocimientos a través
+                                de la lectura.
+                            </p>
+                            <span class="card-number">01</span>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="info-card">
+                            <div class="card-icon pink">
+                                <i class="bi bi-headphones"></i>
+                            </div>
+                            <h3>Escuchar música</h3>
+                            <p>
+                                La música me acompaña en diferentes
+                                momentos y me ayuda a relajarme.
+                            </p>
+                            <span class="card-number">02</span>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="info-card">
+                            <div class="card-icon blue">
+                                <i class="bi bi-camera"></i>
+                            </div>
+                            <h3>Conocer lugares</h3>
+                            <p>
+                                Me gusta disfrutar de la naturaleza
+                                y descubrir nuevos lugares.
+                            </p>
+                            <span class="card-number">03</span>
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             5. INTERESES
+        ========================== -->
+
+        <section id="intereses" class="content-section alternate-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">MIS MOTIVACIONES</span>
+                    <h2>Mis intereses</h2>
+                    <p>Temas que despiertan mi curiosidad.</p>
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-md-4">
+                        <article class="interest-card">
+                            <i class="bi bi-code-slash"></i>
+                            <h3>Programación</h3>
+                            <p>
+                                Aprender a desarrollar páginas web
+                                y crear soluciones mediante código.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="interest-card">
+                            <i class="bi bi-palette"></i>
+                            <h3>Diseño creativo</h3>
+                            <p>
+                                Explorar colores, diseños e ideas
+                                para crear proyectos visuales.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="interest-card">
+                            <i class="bi bi-lightbulb"></i>
+                            <h3>Aprendizaje</h3>
+                            <p>
+                                Adquirir conocimientos nuevos
+                                y mejorar mis habilidades.
+                            </p>
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             6. HORARIO
+        ========================== -->
+
+        <section id="horario" class="content-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">MI ORGANIZACION</span>
+                    <h2>Mi horario diario</h2>
+                    <p>Una forma de organizar mis actividades.</p>
+                </div>
+
+                <div class="table-container">
+
+                    <table class="table custom-table">
+
+                        <thead>
+                            <tr>
+                                <th>Horario</th>
+                                <th>Actividad</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>07:00</td>
+                                <td>Despertar</td>
+                                <td>Comenzar el día y desayunar.</td>
+                            </tr>
+
+                            <tr>
+                                <td>08:00</td>
+                                <td>Estudiar</td>
+                                <td>Asistir a clases y aprender.</td>
+                            </tr>
+
+                            <tr>
+                                <td>12:00</td>
+                                <td>Almorzar</td>
+                                <td>Tiempo para descansar.</td>
+                            </tr>
+
+                            <tr>
+                                <td>14:00</td>
+                                <td>Realizar tareas</td>
+                                <td>Avanzar trabajos académicos.</td>
+                            </tr>
+
+                            <tr>
+                                <td>19:00</td>
+                                <td>Tiempo libre</td>
+                                <td>Disfrutar de mis pasatiempos.</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             7. MUSICA
+        ========================== -->
+
+        <section id="musica" class="content-section alternate-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">MIS SONIDOS FAVORITOS</span>
+                    <h2>Mi música favorita</h2>
+                    <p>La música que acompaña mis momentos.</p>
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-md-4">
+                        <article class="music-card">
+                            <div class="music-cover cover-one">
+                                <i class="bi bi-music-note-beamed"></i>
+                            </div>
+                            <div class="music-info">
+                                <h3>Pop</h3>
+                                <p>Ritmos modernos y llenos de energía.</p>
+                                <span>Género musical</span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="music-card">
+                            <div class="music-cover cover-two">
+                                <i class="bi bi-heart-fill"></i>
+                            </div>
+                            <div class="music-info">
+                                <h3>Romántica</h3>
+                                <p>Melodías para expresar emociones.</p>
+                                <span>Género musical</span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="music-card">
+                            <div class="music-cover cover-three">
+                                <i class="bi bi-vinyl-fill"></i>
+                            </div>
+                            <div class="music-info">
+                                <h3>Instrumental</h3>
+                                <p>Sonidos para concentrarme y relajarme.</p>
+                                <span>Género musical</span>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             8. JUEGOS Y FILTROS DOM
+        ========================== -->
+
+        <section id="juegos" class="content-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">ENTRETENIMIENTO</span>
+                    <h2>Catálogo de juegos</h2>
+                    <p>Selecciona una categoría para filtrar los juegos.</p>
+                </div>
+
+                <div class="filter-buttons">
+
+                    <button class="filter-btn active"
+                            data-filtro="todos">
+                        Todos
+                    </button>
+
+                    <button class="filter-btn"
+                            data-filtro="shooter">
+                        Shooter
+                    </button>
+
+                    <button class="filter-btn"
+                            data-filtro="rpg">
+                        RPG
+                    </button>
+
+                </div>
+
+                <div class="row g-4" id="listaJuegos">
+
+                    <div class="col-md-4 game-item">
+                        <article class="game-card" data-categoria="shooter">
+
+                            <div class="game-image game-one">
+                                <i class="bi bi-crosshair"></i>
+                            </div>
+
+                            <div class="game-info">
+                                <span class="game-category">SHOOTER</span>
+                                <h3>Counter-Strike 2</h3>
+                                <p>Juego de estrategia y acción.</p>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <div class="col-md-4 game-item">
+                        <article class="game-card" data-categoria="rpg">
+
+                            <div class="game-image game-two">
+                                <i class="bi bi-shield-fill"></i>
+                            </div>
+
+                            <div class="game-info">
+                                <span class="game-category">RPG</span>
+                                <h3>The Witcher 3</h3>
+                                <p>Una aventura de fantasía.</p>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <div class="col-md-4 game-item">
+                        <article class="game-card" data-categoria="shooter">
+
+                            <div class="game-image game-three">
+                                <i class="bi bi-bullseye"></i>
+                            </div>
+
+                            <div class="game-info">
+                                <span class="game-category">SHOOTER</span>
+                                <h3>Valorant</h3>
+                                <p>Competencia y trabajo en equipo.</p>
+                            </div>
+
+                        </article>
+                    </div>
+
+                </div>
+
+                <p id="resultadoFiltro" class="filter-result" aria-live="polite">
+                    Mostrando todos los juegos.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             9. FRASE CARACTERISTICA
+        ========================== -->
+
+        <section class="quote-section">
+
+            <div class="container text-center">
+
+                <i class="bi bi-quote quote-icon"></i>
+
+                <span class="section-label">MI FILOSOFIA</span>
+
+                <h2>
+                    "Nunca dejes de aprender,
+                    porque cada día es una oportunidad
+                    para crecer y alcanzar tus sueños."
+                </h2>
+
+                <p>— Mi frase característica</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             10. GRAFICO DE ACTIVIDADES
+        ========================== -->
+
+        <section class="content-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">MIS ACTIVIDADES</span>
+                    <h2>Distribución de mis intereses</h2>
+                    <p>Representación ilustrativa de mis actividades favoritas.</p>
+                </div>
+
+                <div class="chart-container">
+
+                    <div class="chart-item">
+                        <div class="chart-description">
+                            <span>Estudiar</span>
+                            <strong>85%</strong>
+                        </div>
+
+                        <div class="chart-track">
+                            <div class="chart-progress purple-progress"
+                                 style="width:85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="chart-item">
+                        <div class="chart-description">
+                            <span>Escuchar música</span>
+                            <strong>70%</strong>
+                        </div>
+
+                        <div class="chart-track">
+                            <div class="chart-progress pink-progress"
+                                 style="width:70%"></div>
+                        </div>
+                    </div>
+
+                    <div class="chart-item">
+                        <div class="chart-description">
+                            <span>Leer</span>
+                            <strong>60%</strong>
+                        </div>
+
+                        <div class="chart-track">
+                            <div class="chart-progress blue-progress"
+                                 style="width:60%"></div>
+                        </div>
+                    </div>
+
+                    <div class="chart-item">
+                        <div class="chart-description">
+                            <span>Jugar</span>
+                            <strong>45%</strong>
+                        </div>
+
+                        <div class="chart-track">
+                            <div class="chart-progress orange-progress"
+                                 style="width:45%"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             11. TABLA DE OBJETIVOS
+        ========================== -->
+
+        <section class="content-section alternate-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">MIRANDO AL FUTURO</span>
+                    <h2>Mis objetivos personales</h2>
+                    <p>Metas que quiero alcanzar.</p>
+                </div>
+
+                <div class="table-container">
+
+                    <table class="table custom-table">
+
+                        <thead>
+                            <tr>
+                                <th>Objetivo</th>
+                                <th>Descripción</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Aprender programación</td>
+                                <td>Mejorar mis habilidades informáticas.</td>
+                                <td><span class="status-progress">En proceso</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Crear proyectos</td>
+                                <td>Desarrollar páginas web funcionales.</td>
+                                <td><span class="status-progress">En proceso</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Finalizar mis estudios</td>
+                                <td>Completar mi formación académica.</td>
+                                <td><span class="status-pending">Pendiente</span></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             12. FORMULARIO VALIDADO
+        ========================== -->
+
+        <section id="contacto" class="content-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">HABLEMOS</span>
+                    <h2>Formulario de contacto</h2>
+                    <p>Completa los campos para enviar un mensaje de prueba.</p>
+                </div>
+
+                <div class="form-wrapper">
+
+                    <div class="form-intro">
+                        <div class="form-icon">
+                            <i class="bi bi-envelope-paper-heart"></i>
+                        </div>
+
+                        <h3>¡Me gustaría conocerte!</h3>
+
+                        <p>
+                            Si deseas dejar un mensaje, completa
+                            correctamente el siguiente formulario.
+                        </p>
+
+                        <div class="form-detail">
+                            <i class="bi bi-check-circle-fill"></i>
+                            Validación de datos en tiempo real.
+                        </div>
+
+                        <div class="form-detail">
+                            <i class="bi bi-shield-check"></i>
+                            Verificación de campos obligatorios.
+                        </div>
+                    </div>
+
+                    <form id="contactForm" class="contact-form" novalidate>
+
+                        <div class="form-group">
+
+                            <label for="nombre">
+                                Nombre completo <span>*</span>
+                            </label>
+
+                            <input type="text"
+                                   id="nombre"
+                                   name="nombre"
+                                   placeholder="Ej. María Pérez"
+                                   autocomplete="name"
+                                   maxlength="60"
+                                   required>
+
+                            <small class="error-message" id="errorNombre"></small>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="correo">
+                                Correo electrónico <span>*</span>
+                            </label>
+
+                            <input type="email"
+                                   id="correo"
+                                   name="correo"
+                                   placeholder="ejemplo@gmail.com"
+                                   autocomplete="email"
+                                   maxlength="100"
+                                   required>
+
+                            <small class="error-message" id="errorCorreo"></small>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="mensaje">
+                                Mensaje <span>*</span>
+                            </label>
+
+                            <textarea id="mensaje"
+                                      name="mensaje"
+                                      rows="5"
+                                      maxlength="500"
+                                      placeholder="Escribe tu mensaje (mínimo 10 caracteres)"
+                                      required></textarea>
+
+                            <div class="textarea-footer">
+                                <small class="error-message" id="errorMensaje"></small>
+                                <small id="contador">0 / 500</small>
+                            </div>
+
+                        </div>
+
+
+                        <button type="submit" class="submit-btn">
+                            Enviar mensaje
+                            <i class="bi bi-send-fill"></i>
+                        </button>
+
+                        <button type="reset" class="reset-btn">
+                            Limpiar formulario
+                        </button>
+
+                        <div id="alertaBox" role="status"
+                             aria-live="polite"></div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         13. FOOTER
+    ========================== -->
+
+    <footer class="footer-personal">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+                    <h3>Madelyn<span>.</span></h3>
+                    <p>Gracias por visitar mi espacio personal.</p>
+                </div>
+
+                <div class="footer-social">
+
+                    <a href="https://www.facebook.com/"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="https://www.tiktok.com/"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="TikTok">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Madelyn | Diseño Web II</p>
+                <a href="#inicio">Volver arriba ↑</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
